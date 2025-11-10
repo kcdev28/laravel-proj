@@ -1,0 +1,309 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+
+
+}
+
+
+.navbar {
+    box-shadow: 0 1px 10px rgba(0, 0, 0, 0.3);
+    background-color: white;
+}
+
+.navbar .navbar-brand {
+    font-family: "EB Garamond", serif;
+    font-weight: 600;
+    font-style: normal;
+
+}
+
+.navbar img {
+    width: 40px;
+    margin: 8px;
+}
+
+.navbar img:hover {
+    cursor: pointer;
+}
+
+
+.nav-item .nav-link {
+    position: relative;
+    color: #000;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+.nav-link::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    background-color: #198754;
+    transition: width 0.3s ease-in-out;
+}
+
+
+.nav-item .nav-link:hover {
+    color: #198754;
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+.navbar .btn {
+    background-color: #198754;
+    color: white;
+
+}
+
+.navbar .btn:hover {
+    color: #198754;
+    border: 1px solid #198754;
+}
+
+
+.home {
+  width: 100%;
+  height: 100vh;
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url('/images/home.JPG') center/cover no-repeat;
+
+}
+
+
+
+
+.home .content {
+    width: 100%;
+    height: 100vh;
+}
+
+hr {
+    width: 70%;
+    height: 3px;
+    background-color: white;
+    border: none;
+    border-radius: 2px;
+}
+
+.home .content .lungsodquezonlogo {
+    width: 130px;
+    height: 90px;
+    margin-top: 15px;
+    margin: 10px;
+}
+
+.home .content .sanagustinlogo {
+    width: 150px;
+    height: 120px;
+}
+
+.home .content .bagongpilipinaslogo {
+    width: 150px;
+    height: 110px;
+}
+
+
+.about {
+    width: 100%;
+    height: 100vh;
+
+}
+
+.about .content {
+    width: 100%;
+    height: 100vh;
+}
+
+.about .content .mission-content {
+    width: 100%;
+
+}
+
+.about .content .mission-content .aboutimg{
+    width: 50%;
+    height: 400px;
+    border-radius: 10px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2), -2px 0 5px rgba(0, 0, 0, 0.2), 0 2px 5px rgba(0, 0, 0, 0.2), 0 -2px 5px rgba(0, 0, 0, 0.2);
+ 
+}
+
+.about .content .mission-content .mission-vision {
+    width: 50%;
+}
+
+.about .content .mission-content .mission-vision img {
+    width: 24px;
+    height: 24px;
+    margin: 7px;
+}
+
+
+.officials {
+    width: 100%;
+    height: 100vh;
+
+}
+
+.officials .content {
+    width: 100%;
+    height: 100vh;
+}
+
+.officials .content .card-officials {
+    width: 180px;
+    height: 165px;
+    border-radius: 10px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2), -2px 0 5px rgba(0, 0, 0, 0.2), 0 2px 5px rgba(0, 0, 0, 0.2), 0 -2px 5px rgba(0, 0, 0, 0.2);
+
+
+}
+
+.officials .content .card-officials img {
+    background-color:#198754;
+    border-radius: 50px;
+    width: 70px;
+    padding: 3px;
+}
+
+
+.service {
+    width: 100%;
+    height: 100vh;
+}
+
+.service .content {
+    width: 100%;
+    height: 100vh;
+}
+
+.service .service-content .card-service{
+    width: 300px;
+    height: 230px;
+    border-radius: 10px;
+    margin: 15px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2), -2px 0 5px rgba(0, 0, 0, 0.2), 0 2px 5px rgba(0, 0, 0, 0.2), 0 -2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.service .service-content .card-service img{
+    width: 70px;
+    margin: 10px;
+    border: 1px solid #198754;
+    border-radius: 5px;
+    padding: 10px;
+}
+.service .service-content .card-service .btn{
+    width: 200px;
+    background-color: #198754;
+    color: white;
+    margin: 10px;
+    font-weight: 600;
+}
+
+.service .service-content .card-service .btn:hover{
+    background-color: white;
+    color:  #198754;
+    border:1px solid #198754;
+}
+
+
+.announcement {
+    width: 100%;
+    height: 100vh;
+    
+}
+
+.announcement .content{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.announcement .content .announcement-container{
+    width: 100%;
+    height: 500px;
+    border: 1px solid #198754;
+    border-radius: 10px;
+    overflow-y: auto;
+
+}
+
+.announcement .content .announcement-container .announcement-content{
+    width: 100%;
+    height: 90%;
+}
+
+.announcement .content .announcement-container .announcement-content .announcement-info{
+    width: 50%;
+    height: 100%;
+    border-radius: 10px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2), -2px 0 5px rgba(0, 0, 0, 0.2), 0 2px 5px rgba(0, 0, 0, 0.2), 0 -2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.announcement .content .announcement-container .announcement-content .announcement-info img{
+    width: 24px;
+    height: 24px;
+    margin: 5px;
+
+}
+
+.announcement .content .announcement-container .announcement-content .announcement-pic{
+    width: 50%;
+    height: 100%;
+}
+
+.announcement .content .announcement-container .announcement-content .announcement-pic img{
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    border: 2px solid #198754;
+}
+
+footer{
+    color: white;
+    background-color: #198754;
+    width: 100%;
+    height: 350px;
+}
+
+footer .location{
+    width: 50%;
+    height: 100%;
+    
+    margin: 10px;
+}
+
+footer .location iframe{
+    border-radius: 10px;
+    width: 100%;
+    height: 100%;
+}
+
+footer .contact{
+    width: 50%;
+    height: 100%;
+ 
+    margin: 10px;
+}
+
+footer .contact img {
+    height: 35px;
+    width: 35px;
+    margin: 3px;
+}
