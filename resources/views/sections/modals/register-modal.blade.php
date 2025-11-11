@@ -8,69 +8,70 @@
             </div>
 
             <div class="modal-body">
-                <form class="row g-3">
+                <form class="row g-3" id="registerForm" method="POST" action="{{ route('register.store') }}" enctype="multipart/form-data">
+                    @csrf
 
 
                     <h5 class="fw-bold mt-3">Personal Information</h5>
                     <div class="col-md-3">
                         <label class="form-label">First Name</label>
-                        <input type="text" class="form-control" placeholder="Enter first name" required>
+                        <input type="text" name="first_name" class="form-control" placeholder="Enter first name" required>
                     </div>
                     <div class="col-md-3">
                         <label class="form-label">Middle Name</label>
-                        <input type="text" class="form-control" placeholder="Enter middle name">
+                        <input type="text" name="middle_name" class="form-control" placeholder="Enter middle name" required>
                     </div>
                     <div class="col-md-3">
                         <label class="form-label">Last Name</label>
-                        <input type="text" class="form-control" placeholder="Enter last name" required>
+                        <input type="text" name="last_name" class="form-control" placeholder="Enter last name" required>
                     </div>
                     <div class="col-md-3">
                         <label class="form-label">Suffix</label>
-                        <input type="text" class="form-control" placeholder="e.g. Jr, Sr, III">
+                        <input type="text" name="suffix" class="form-control" placeholder="e.g. Jr, Sr, III">
                     </div>
 
                     <div class="col-md-6">
                         <label class="form-label">Your Photo</label>
-                        <input type="file" class="form-control" accept="image/*">
+                        <input type="file" name="profile_pic" class="form-control" accept="image/*">
                     </div>
 
                     <div class="col-md-6">
                         <label class="form-label">Any Valid ID / For Validation Purposes</label>
-                        <input type="file" class="form-control" accept="image/*">
+                        <input type="file" name="valid_id" class="form-control" accept="image/*">
                     </div>
 
 
                     <h5 class="fw-bold mt-4">Address Information</h5>
                     <div class="col-md-3">
                         <label class="form-label">Street</label>
-                        <input type="text" class="form-control" placeholder="Street name">
+                        <input type="text" name="street" class="form-control" placeholder="Street name">
                     </div>
                     <div class="col-md-3">
                         <label class="form-label">Area</label>
-                        <input type="text" class="form-control" placeholder="Subdivision / Area">
+                        <input type="text" name="area" class="form-control" placeholder="Subdivision / Area">
                     </div>
                     <div class="col-md-3">
                         <label class="form-label">Barangay</label>
-                        <input type="text" class="form-control" value="San Agustin" readonly>
+                        <input type="text" name="barangay" class="form-control" value="San Agustin" readonly>
                     </div>
                     <div class="col-md-3">
                         <label class="form-label">City</label>
-                        <input type="text" class="form-control" value="Quezon City" readonly>
+                        <input type="text" name="city" class="form-control" value="Quezon City" readonly>
                     </div>
 
 
                     <h5 class="fw-bold mt-4">Other Details</h5>
                     <div class="col-md-4">
                         <label class="form-label">Date of Birth</label>
-                        <input type="date" class="form-control" id="dob" required>
+                        <input type="date" name="dob" class="form-control" id="dob" required>
                     </div>
                     <div class="col-md-2">
                         <label class="form-label">Age</label>
-                        <input type="text" class="form-control" id="age" readonly>
+                        <input type="text" name="age" class="form-control" id="age" readonly>
                     </div>
                     <div class="col-md-3">
                         <label class="form-label">Gender</label>
-                        <select class="form-select" required>
+                        <select class="form-select" name="gender" required>
                             <option value="" selected disabled>-- Select --</option>
                             <option>Male</option>
                             <option>Female</option>
@@ -79,7 +80,7 @@
                     </div>
                     <div class="col-md-3">
                         <label class="form-label">Civil Status</label>
-                        <select class="form-select" required>
+                        <select class="form-select" name="civil_status" required>
                             <option value="" selected disabled>-- Select --</option>
                             <option>Single</option>
                             <option>Married</option>
@@ -90,15 +91,15 @@
 
                     <div class="col-md-4">
                         <label class="form-label">Contact No.</label>
-                        <input type="text" class="form-control" placeholder="09XXXXXXXXX">
+                        <input type="text" name="contact" class="form-control" placeholder="09XXXXXXXXX">
                     </div>
                     <div class="col-md-4">
                         <label class="form-label">Religion</label>
-                        <input type="text" class="form-control" placeholder="Enter religion">
+                        <input type="text" name="religion" class="form-control" placeholder="Enter religion">
                     </div>
                     <div class="col-md-4">
                         <label class="form-label">Voter Status</label>
-                        <select class="form-select">
+                        <select class="form-select" name="voter_status">
                             <option value="" selected disabled>-- Select --</option>
                             <option>Registered</option>
                             <option>Not Registered</option>
@@ -107,15 +108,15 @@
 
                     <div class="col-md-3">
                         <label class="form-label">Precinct No.</label>
-                        <input type="text" class="form-control" placeholder="Enter precinct number">
+                        <input type="text" name="precinct_no" class="form-control" placeholder="Enter precinct number">
                     </div>
                     <div class="col-md-3">
                         <label class="form-label">Occupation</label>
-                        <input type="text" class="form-control" placeholder="Enter occupation">
+                        <input type="text" name="occupation" class="form-control" placeholder="Enter occupation">
                     </div>
                     <div class="col-md-3">
                         <label class="form-label">Employment Status</label>
-                        <select class="form-select">
+                        <select class="form-select" name="employment_status">
                             <option value="" selected disabled>-- Select --</option>
                             <option>Employed</option>
                             <option>Unemployed</option>
@@ -125,7 +126,7 @@
                     </div>
                     <div class="col-md-3">
                         <label class="form-label">Special Group Status</label>
-                        <select class="form-select">
+                        <select class="form-select" name="special_group_status">
                             <option value="" selected disabled>-- Select --</option>
                             <option>None</option>
                             <option>PWD</option>
@@ -138,11 +139,11 @@
                     <h5 class="fw-bold mt-4">Account Information</h5>
                     <div class="col-md-6">
                         <label class="form-label">Username</label>
-                        <input type="text" class="form-control" placeholder="Enter username" required>
+                        <input type="text" name="username" class="form-control" placeholder="Enter username" required>
                     </div>
                     <div class="col-md-3">
                         <label class="form-label">Password</label>
-                        <input type="password" class="form-control" id="password" placeholder="Enter password"
+                        <input type="password" name="password" class="form-control" id="password" placeholder="Enter password"
                             required>
 
                         <div class="form-check mt-2">
@@ -168,7 +169,29 @@
                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
                     </div>
                 </form>
+                
             </div>
         </div>
     </div>
 </div>
+
+@if(session('success'))
+    <div class="alert alert-success alert-dismissible fade show position-fixed top-0 start-50 translate-middle-x mt-3 w-50 shadow" role="alert" style="z-index: 1055;">
+        {{ session('success') }}
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+@endif
+
+@if(session('error'))
+    <div class="alert alert-danger alert-dismissible fade show position-fixed top-0 start-50 translate-middle-x mt-3 w-50 shadow" role="alert" style="z-index: 1055;">
+        {{ session('error') }}
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+@endif
+
+<script>
+    if(session('success') || session('error'))
+        var registerModal = new bootstrap.Modal(document.getElementById('registerModal'));
+        registerModal.show();
+    endif
+</script>
